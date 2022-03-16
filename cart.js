@@ -10,9 +10,10 @@ function updateProductNumber(product, price, isIncreasing) {
     // update case total
     const productTotal = document.getElementById(product + '-total');
     productTotal.innerText = productInput.value * price
+    calculateTotal();
 }
 
-function getInputValue() {
+function getInputValue(product) {
     const productInput = document.getElementById(product + '-number')
     const productNumber = parseInt(productInput.value)
     return productNumber;
